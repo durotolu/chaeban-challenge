@@ -1,22 +1,32 @@
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Input from './components/Input'
+
+const initialinputFields = {
+  date: "",
+  message: "",
+}
 
 function App() {
+  const [inputFields, setInputFields] = useState(initialinputFields);
+
+  const onValueChange = e => {
+    setInputFields({
+      ...inputFields,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const onCreateAccount = e => {
+    console.log(inputFields);
+    setInputFields(initialinputFields)
+  }
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Input inputFields={inputFields} onValueChange={onValueChange} onCreateAccount={onCreateAccount} />
       </header>
     </div>
   );
