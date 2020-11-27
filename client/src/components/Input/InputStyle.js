@@ -47,12 +47,7 @@ export const StyledInput = styled.div`
       border-radius: 3px;
     }
 
-    Link {
-      border: 1px solid red;
-    }
-
     button {
-      border: 1px solid red;
       width: 100%;
       font-weight: bold;
       font-size: .6em;
@@ -75,12 +70,12 @@ export const StyledInput = styled.div`
         font-size: .6em;
 
         /* HIDE RADIO */
-        /* input { 
+        input { 
           position: absolute;
           opacity: 0;
           width: 0;
           height: 0;
-        } */
+        }
 
         /* IMAGE STYLES */
         input + img {
@@ -89,13 +84,19 @@ export const StyledInput = styled.div`
 
         /* CHECKED STYLES */
         input:checked + img {
-          outline: 2px solid #f00;
+          /* outline: 2.3px solid #f00; */
+          box-shadow: 0 0 3pt 2pt red;
+        }
+
+        input:hover + img {
+          box-shadow: 0 0 3pt 2pt grey;
         }
 
         img {
           height: 4em;
           margin: .5em auto;
-          width: 5.5em
+          width: 5.5em;
+          border-radius: 6px;
         }
       }
     }

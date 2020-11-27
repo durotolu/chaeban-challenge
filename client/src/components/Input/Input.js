@@ -19,27 +19,27 @@ function Input({ inputFields, onValueChange, onCreateAccount }) {
           <textarea rows={10} cols={30} value={inputFields.message} onChange={onValueChange} name="message" />
         </label>
         <div>
-          <h4>Choose Theme</h4>
+          <h4>Select Theme</h4>
           <div className="themes">
-            <label htmlFor="theme">
+            <label htmlFor="cool">
               <span>Cool</span>
-              <input type="radio" value="cool" onChange={onValueChange} name="theme" />
+              <input id="cool" type="radio" value="cool" onChange={onValueChange} name="theme" />
               <img src={cool} />
             </label>
-            <label htmlFor="theme">
+            <label htmlFor="clouds">
               <span>Clouds</span>
-              <input type="radio" value="clouds" onChange={onValueChange} name="theme" />
+              <input id="clouds" type="radio" value="clouds" onChange={onValueChange} name="theme" />
               <img src={clouds} />
             </label>
-            <label htmlFor="theme">
+            <label htmlFor="solar-system">
               <span>Solar System</span>
-              <input type="radio" value="solar-system" onChange={onValueChange} name="theme" />
+              <input id="solar-system" type="radio" value="solar-system" onChange={onValueChange} name="theme" />
               <img src={solarSystem} />
             </label>
           </div>
         </div>
         <Link to='/output'>
-          <button type="button" onClick={onCreateAccount}>Lanch Output</button>
+          <button type="button" onClick={onCreateAccount}>Launch Output</button>
         </Link>
       </form>
     </StyledInput>
