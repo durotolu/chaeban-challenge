@@ -8,6 +8,7 @@ import Output from './components/Output/Output';
 const initialinputFields = {
   date: "",
   message: "",
+  theme: "",
 }
 
 function App() {
@@ -22,6 +23,8 @@ function App() {
   };
 
   const onCreateAccount = e => {
+    console.log(inputFields)
+    e.preventDefault()
     setOutputFields(inputFields)
     setInputFields(initialinputFields)
   }
