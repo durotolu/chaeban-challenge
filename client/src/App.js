@@ -32,7 +32,7 @@ function App() {
         <Route exact path='/' render={props => {
           return <Input {...props} inputFields={inputFields} onValueChange={onValueChange} onCreateAccount={onCreateAccount} />
         }} />
-        <Route exact path='/' render={props => {
+        <Route exact path='/output' render={props => {
           return <Output {...props} outputFields={outputFields} />
         }} />
       </header>
