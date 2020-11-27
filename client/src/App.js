@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Route } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
-import Input from './components/Input';
-import Output from './components/Output';
+import Input from './components/Input/Input';
+import Output from './components/Output/Output';
 
 const initialinputFields = {
   date: "",
