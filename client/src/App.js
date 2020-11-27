@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Route } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
 import Input from './components/Input';
@@ -28,8 +29,12 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Input inputFields={inputFields} onValueChange={onValueChange} onCreateAccount={onCreateAccount} />
-        <Output outputFields={outputFields} />
+        <Route exact path='/' render={props => {
+          return <Input {...props} inputFields={inputFields} onValueChange={onValueChange} onCreateAccount={onCreateAccount} />
+        }} />
+        <Route exact path='/' render={props => {
+          return <Output {...props} outputFields={outputFields} />
+        }} />
       </header>
     </div>
   );
