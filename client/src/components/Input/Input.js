@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { StyledInput } from "./InputStyle"
-import cool from "../../images/hero-image.jpg"
-import clouds from "../../images/images.jpg"
-import solarSystem from "../../images/solar-system-theme-dw10.jpg"
+import { StyledInput } from "./InputStyle";
+import cool from "../../images/hero-image.jpg";
+import clouds from "../../images/images.jpg";
+import solarSystem from "../../images/solar-system-theme-dw10.jpg";
 
 function Input({ inputFields, onValueChange, onCreateAccount }) {
   return (

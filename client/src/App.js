@@ -23,22 +23,18 @@ function App() {
   };
 
   const onCreateAccount = e => {
-    console.log(inputFields)
-    e.preventDefault()
     setOutputFields(inputFields)
     setInputFields(initialinputFields)
   }
 
   return (
     <div className="App">
-      <header className="App-header">
-        <Route exact path='/' render={props => {
-          return <Input {...props} inputFields={inputFields} onValueChange={onValueChange} onCreateAccount={onCreateAccount} />
-        }} />
-        <Route exact path='/output' render={props => {
-          return <Output {...props} outputFields={outputFields} />
-        }} />
-      </header>
+      <Route exact path='/' render={props => {
+        return <Input {...props} inputFields={inputFields} onValueChange={onValueChange} onCreateAccount={onCreateAccount} />
+      }} />
+      <Route exact path='/output' render={props => {
+        return <Output {...props} outputFields={outputFields} />
+      }} />
     </div>
   );
 }
