@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Route } from 'react-router-dom';
-import logo from './logo.svg';
 import './App.css';
 import Input from './components/Input/Input';
 import Output from './components/Output/Output';
@@ -29,7 +28,6 @@ function App() {
 
   return (
     <div className="App">
-      <h2>The code can be found <a href="https://github.com/durotolu/chaeban-challenge">here</a></h2>
       <Route exact path='/' render={props => {
         return <Input {...props} inputFields={inputFields} onValueChange={onValueChange} onCreateAccount={onCreateAccount} />
       }} />

@@ -3,13 +3,20 @@ import { Link } from 'react-router-dom';
 import { StyledInput } from "./InputStyle";
 import cool from "../../images/hero-image.jpg";
 import clouds from "../../images/images.jpg";
-import solarSystem from "../../images/solar-system-theme-dw10.jpg";
+import cream from "../../images/ice-cream.jpg";
+import dunes from "../../images/main_mobile_themes.png";
 
 function Input({ inputFields, onValueChange, onCreateAccount }) {
+  const isDisabled = () => {
+    const { date, message, theme } = inputFields
+    return !date || !message || !theme;
+  }
+
   return (
-    <StyledInput>
+    <StyledInput inputFields={inputFields}>
+      <h1>Code lives at <a href="https://github.com/durotolu/chaeban-challenge"><i className="navhead fa fa-github"></i></a></h1>
       <form>
-        <h1>Input Page</h1>
+        <h2>Input Form</h2>
         <label htmlFor="date">
           <h4>Date</h4>
           <input type="date" value={inputFields.date} onChange={onValueChange} name="date" />
@@ -21,6 +28,11 @@ function Input({ inputFields, onValueChange, onCreateAccount }) {
         <div>
           <h4>Select Theme</h4>
           <div className="themes">
+            <label htmlFor="cream">
+              <span>Cream</span>
+              <input id="cream" type="radio" value="cream" onChange={onValueChange} name="theme" />
+              <img src={cream} />
+            </label>
             <label htmlFor="cool">
               <span>Cool</span>
               <input id="cool" type="radio" value="cool" onChange={onValueChange} name="theme" />
@@ -31,15 +43,15 @@ function Input({ inputFields, onValueChange, onCreateAccount }) {
               <input id="clouds" type="radio" value="clouds" onChange={onValueChange} name="theme" />
               <img src={clouds} />
             </label>
-            <label htmlFor="solar-system">
-              <span>Solar System</span>
-              <input id="solar-system" type="radio" value="solar-system" onChange={onValueChange} name="theme" />
-              <img src={solarSystem} />
+            <label htmlFor="dunes">
+              <span>Dunes</span>
+              <input id="dunes" type="radio" value="dunes" onChange={onValueChange} name="theme" />
+              <img src={dunes} />
             </label>
           </div>
         </div>
         <Link to='/output'>
-          <button type="button" onClick={onCreateAccount}>Launch Output</button>
+          <button disabled={isDisabled()} type="button" onClick={onCreateAccount}>Launch Output</button>
         </Link>
       </form>
     </StyledInput>

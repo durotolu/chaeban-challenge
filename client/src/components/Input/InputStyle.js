@@ -12,6 +12,19 @@ export const StyledInput = styled.div`
   font-size: calc(10px + 2vmin);
   color: white;
 
+  h1 {
+    font-size: 35px;
+    margin-bottom: 0;
+
+    a {
+      color: inherit;
+    }
+
+    a:hover {
+      color: #84bbd3;
+    }
+  }
+
   form {
     min-height: 70vh;
     display: flex;
@@ -22,15 +35,15 @@ export const StyledInput = styled.div`
     text-align: left;
     border: 1px solid rgb(230, 211, 211);
     min-width: 350px;
-    padding: .6em .8em;
+    padding: .5em .8em;
     margin: auto;
 
-    h1 {
+    h2 {
       font-weight: 500;
       font-size: 30px;
       line-height: 1;
-      text-align: left;
-      margin-bottom: .3em;
+      margin: .2em auto;
+      border-bottom: 1px dashed white;
     }
 
     label {
@@ -50,6 +63,13 @@ export const StyledInput = styled.div`
     input, button {
       height: 2em;
       border-radius: 3px;
+    }
+
+    button:disabled,
+    button[disabled]{
+      border: 1px solid #999999;
+      background-color: #cccccc;
+      color: #666666;
     }
 
     div {
@@ -82,7 +102,7 @@ export const StyledInput = styled.div`
           box-shadow: 0 0 3pt 2pt red;
         }
 
-        input:hover + img {
+        input:not(:checked):hover + img {
           box-shadow: 0 0 3pt 2pt grey;
         }
 
