@@ -13,4 +13,18 @@ export const StyledOutput = styled.div`
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
+  color: ${props => props.outputFields.theme === 'cool' ? 'white' :
+      props.outputFields.theme === 'clouds'? 'black' : 'white'
+    };
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  align-items: center;
+  font-size: calc(20px + 2vmin);
+
+  time {
+    font-weight: bold;
+  }
 `

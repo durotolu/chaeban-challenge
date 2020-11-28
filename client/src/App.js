@@ -29,6 +29,7 @@ function App() {
 
   return (
     <div className="App">
+      <h2>The code can be found <a href="https://github.com/durotolu/chaeban-challenge">here</a></h2>
       <Route exact path='/' render={props => {
         return <Input {...props} inputFields={inputFields} onValueChange={onValueChange} onCreateAccount={onCreateAccount} />
       }} />

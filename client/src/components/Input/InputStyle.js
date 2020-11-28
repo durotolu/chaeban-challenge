@@ -8,10 +8,7 @@ export const StyledInput = styled.div`
   margin: 0 auto;
   background-color: #282c34;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 
@@ -25,7 +22,7 @@ export const StyledInput = styled.div`
     text-align: left;
     border: 1px solid rgb(230, 211, 211);
     min-width: 350px;
-    padding: 0 .8em;
+    padding: .6em .8em;
     margin: auto;
 
     h1 {
@@ -53,17 +50,6 @@ export const StyledInput = styled.div`
     input, button {
       height: 2em;
       border-radius: 3px;
-    }
-
-    button {
-      width: 100%;
-      font-weight: bold;
-      font-size: .6em;
-      background-color: #148abe;
-      color: white;
-      cursor: pointer;
-      height: 2.3em;
-      margin: .5em auto;
     }
 
     div {

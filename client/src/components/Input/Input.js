@@ -9,14 +9,14 @@ function Input({ inputFields, onValueChange, onCreateAccount }) {
   return (
     <StyledInput>
       <form>
-        <h1>Create account</h1>
+        <h1>Input Page</h1>
         <label htmlFor="date">
           <h4>Date</h4>
           <input type="date" value={inputFields.date} onChange={onValueChange} name="date" />
         </label>
         <label htmlFor="message">
           <h4>Message</h4>
-          <textarea rows={10} cols={30} value={inputFields.message} onChange={onValueChange} name="message" />
+          <textarea placeholder="Start typing..." rows={10} cols={30} value={inputFields.message} onChange={onValueChange} name="message" />
         </label>
         <div>
           <h4>Select Theme</h4>
