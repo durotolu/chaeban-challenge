@@ -31,22 +31,22 @@ function Input({ inputFields, onValueChange, onCreateAccount }) {
             <label htmlFor="cream">
               <span>Cream</span>
               <input id="cream" type="radio" value="cream" onChange={onValueChange} name="theme" />
-              <img src={cream} alt="ice-cream picture" />
+              <img src={cream} alt="ice-cream" />
             </label>
             <label htmlFor="cool">
               <span>Cool</span>
               <input id="cool" type="radio" value="cool" onChange={onValueChange} name="theme" />
-              <img src={cool} alt="blue theme bicture" />
+              <img src={cool} alt="blue" />
             </label>
             <label htmlFor="clouds">
               <span>Clouds</span>
               <input id="clouds" type="radio" value="clouds" onChange={onValueChange} name="theme" />
-              <img src={clouds} alt="clouds picture" />
+              <img src={clouds} alt="clouds" />
             </label>
             <label htmlFor="dunes">
               <span>Dunes</span>
               <input id="dunes" type="radio" value="dunes" onChange={onValueChange} name="theme" />
-              <img src={dunes} alt="dunes theme picture" />
+              <img src={dunes} alt="dunes" />
             </label>
           </div>
         </div>
