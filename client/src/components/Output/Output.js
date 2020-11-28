@@ -21,7 +21,7 @@ function Output({ outputFields }) {
       <div>
         <p>{day}, <time dateTime={outputFields.date}>{outputFields.date}</time></p>
         <p>{outputFields.message}</p>
-        <p>You can review the code at <a href="https://github.com/durotolu/chaeban-challenge"><i className="navhead fa fa-github"></i></a></p>
+        <p>You can review the code <a href="https://github.com/durotolu/chaeban-challenge">@durotolu<i className="navhead fa fa-github"></i></a></p>
         <Link to='/'>
           <button type="button">Back to Select Input</button>
         </Link>

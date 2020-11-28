@@ -29,4 +29,13 @@ export const StyledOutput = styled.div`
   time {
     font-weight: bold;
   }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
 `
