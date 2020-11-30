@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import { StyledInput } from "./InputStyle";
 import cool from "../../images/hero-image.jpg";
 import clouds from "../../images/images.jpg";
-import cream from "../../images/ice-cream.jpg";
-import dunes from "../../images/main_mobile_themes.png";
+import choc from "../../images/choc.jpg";
+import ice from "../../images/ice.jpg";
 
 function Input({ inputFields, onValueChange, onCreateAccount }) {
   const isDisabled = () => {
@@ -19,7 +19,7 @@ function Input({ inputFields, onValueChange, onCreateAccount }) {
         <h2>Input Form</h2>
         <label htmlFor="name">
           <h4>Name</h4>
-          <input type="text" value={inputFields.name} onChange={onValueChange} name="name" />
+          <input type="text" placeholder="Let's meet" value={inputFields.name} onChange={onValueChange} name="name" />
         </label>
         <label htmlFor="date">
           <h4>Date</h4>
@@ -27,15 +27,15 @@ function Input({ inputFields, onValueChange, onCreateAccount }) {
         </label>
         <label htmlFor="message">
           <h4>Message</h4>
-          <textarea placeholder="Start typing..." rows={10} cols={30} value={inputFields.message} onChange={onValueChange} name="message" />
+          <textarea placeholder="What'll you like to tell us..." rows={10} cols={30} value={inputFields.message} onChange={onValueChange} name="message" />
         </label>
         <div>
           <h4>Select Theme</h4>
           <div className="themes">
-            <label htmlFor="cream">
+            <label htmlFor="ice">
               <span>Cream</span>
-              <input id="cream" type="radio" value="cream" onChange={onValueChange} name="theme" />
-              <img src={cream} alt="ice-cream" />
+              <input id="ice" type="radio" value="ice" onChange={onValueChange} name="theme" />
+              <img src={ice} alt="ice-cream" />
             </label>
             <label htmlFor="cool">
               <span>Cool</span>
@@ -47,10 +47,10 @@ function Input({ inputFields, onValueChange, onCreateAccount }) {
               <input id="clouds" type="radio" value="clouds" onChange={onValueChange} name="theme" />
               <img src={clouds} alt="clouds" />
             </label>
-            <label htmlFor="dunes">
+            <label htmlFor="choc">
               <span>Dunes</span>
-              <input id="dunes" type="radio" value="dunes" onChange={onValueChange} name="theme" />
-              <img src={dunes} alt="dunes" />
+              <input id="choc" type="radio" value="choc" onChange={onValueChange} name="theme" />
+              <img src={choc} alt="chocolate" />
             </label>
           </div>
         </div>

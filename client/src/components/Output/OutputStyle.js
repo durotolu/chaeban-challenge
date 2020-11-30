@@ -1,14 +1,14 @@
 import styled from "styled-components";
 import cool from "../../images/hero-image.jpg";
 import clouds from "../../images/images.jpg";
-import cream from "../../images/ice-cream.jpg";
-import dunes from "../../images/main_mobile_themes.png";
+import choc from "../../images/choc.jpg";
+import ice from "../../images/ice.jpg";
 
 export const StyledOutput = styled.div`
   background-image: url(
     ${props => props.outputFields.theme === 'cool' ? cool :
       props.outputFields.theme === 'clouds'? clouds :
-      props.outputFields.theme === 'cream'? cream : dunes
+      props.outputFields.theme === 'choc'? choc : ice
     }
   );
   height: 100vh;
@@ -16,7 +16,7 @@ export const StyledOutput = styled.div`
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
   color: ${props => 
-    props.outputFields.theme === 'cool' || props.outputFields.theme === 'dunes' ? 'white' : 'black'
+    props.outputFields.theme === 'cool' || props.outputFields.theme === 'choc' ? 'white' : 'black'
   };
 
   display: flex;
