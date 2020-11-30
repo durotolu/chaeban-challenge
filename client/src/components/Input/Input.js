@@ -64,7 +64,7 @@ function Input({ inputFields, onValueChange, onCreateAccount }) {
               <img src={clouds} alt="clouds" />
             </label>
             <label htmlFor="choc">
-              <span>Dunes</span>
+              <span>Choco</span>
               <input id="choc" type="radio" value="choc" onChange={onValueChange} name="theme" />
               <img src={choc} alt="chocolate" />
             </label>
