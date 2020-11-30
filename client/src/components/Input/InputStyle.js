@@ -6,11 +6,46 @@ export const StyledInput = styled.div`
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
-  background-color: #282c34;
   min-height: 100vh;
   align-items: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+
+  .nav {
+    display: flex;
+    align-items: center;
+    width: 90vw;
+    justify-content: space-between;
+  }
+
+  .dark-mode-text {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .dark-mode__toggle {
+    background: papayawhip;
+    border-radius: 50px;
+    border: 1px solid black;
+    height: 20px;
+    position: relative;
+    width: 40px;
+    cursor: pointer;
+    margin: 0 auto;
+  }
+
+  .toggle {
+    background: #f68819;
+    border-radius: 50px;
+    height: 18px;
+    left: 0;
+    position: absolute;
+    transition: 0.2s;
+    width: 20px;
+  }
+
+  .toggled {
+    left: 18px;
+  }
 
   h1 {
     font-size: 35px;

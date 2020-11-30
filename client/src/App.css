@@ -7,6 +7,11 @@
   pointer-events: none;
 }
 
+.dark-mode {
+  background-color: #282c34;
+  color: white;
+}
+
 button {
   width: 100%;
   font-weight: bold;
