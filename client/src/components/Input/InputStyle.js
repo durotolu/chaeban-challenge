@@ -34,8 +34,8 @@ export const StyledInput = styled.div`
     font-size: calc(10px + 2vmin);
     text-align: left;
     border: 1px solid rgb(230, 211, 211);
-    min-width: 350px;
-    padding: .5em .8em;
+    min-width: 325px;
+    padding: .4em .8em;
     margin: auto;
 
     h2 {
@@ -51,12 +51,12 @@ export const StyledInput = styled.div`
       flex-direction: column;
       font-weight: bold;
       width: 100%;
-      margin: .45em 0;
+      margin: .3em 0;
     }
 
     h4 {
       font-weight: bold;
-      margin: .45em 0;
+      margin: .25em 0;
       font-size: .75em;
     }
 
@@ -109,7 +109,7 @@ export const StyledInput = styled.div`
         img {
           height: 4em;
           margin: .5em auto;
-          width: 5.5em;
+          width: 5em;
           border-radius: 6px;
         }
       }
