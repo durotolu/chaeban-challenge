@@ -5,6 +5,7 @@ import Input from './components/Input/Input';
 import Output from './components/Output/Output';
 
 const initialinputFields = {
+  name: "",
   date: "",
   message: "",
   theme: "",
