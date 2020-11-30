@@ -19,6 +19,7 @@ function Output({ outputFields }) {
   return (
     <StyledOutput outputFields={outputFields}>
       <div>
+        <p>Welcome, {outputFields.name}</p>
         <p>{day}, <time dateTime={outputFields.date}>{outputFields.date}</time></p>
         <p>{outputFields.message}</p>
         <p>You can review the code <a href="https://github.com/durotolu/chaeban-challenge">@durotolu<i className="navhead fa fa-github"></i></a></p>

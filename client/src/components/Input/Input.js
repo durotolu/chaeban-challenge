@@ -8,8 +8,8 @@ import dunes from "../../images/main_mobile_themes.png";
 
 function Input({ inputFields, onValueChange, onCreateAccount }) {
   const isDisabled = () => {
-    const { date, message, theme } = inputFields
-    return !date || !message || !theme;
+    const { name, date, message, theme } = inputFields
+    return !name || !date || !message || !theme;
   }
 
   return (
@@ -17,6 +17,10 @@ function Input({ inputFields, onValueChange, onCreateAccount }) {
       <h1>Code lives at <a href="https://github.com/durotolu/chaeban-challenge"><i className="navhead fa fa-github"></i></a></h1>
       <form>
         <h2>Input Form</h2>
+        <label htmlFor="name">
+          <h4>Name</h4>
+          <input type="text" value={inputFields.name} onChange={onValueChange} name="name" />
+        </label>
         <label htmlFor="date">
           <h4>Date</h4>
           <input type="date" value={inputFields.date} onChange={onValueChange} name="date" />
